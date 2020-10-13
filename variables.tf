@@ -25,7 +25,7 @@
   variable "template" {
       description = "(Required) Source template to be used, this example uses debian-cloudinit."
       default = "debian-cloudinit"
-      type = "string"
+      type = string
   }
   variable "os_type" {
       description = "(Optional) Type of VM to be created, this example needs cloud-init"
