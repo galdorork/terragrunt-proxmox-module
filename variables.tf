@@ -2,7 +2,7 @@
       description = "(Required) Amount of VMs to be created"
       default = "0"
   }
-  variable "vm_name[count.index]" {
+  variable "vm_name" {
       description = "(Required) VM Name"
       default = "tf"
       type = "string"
