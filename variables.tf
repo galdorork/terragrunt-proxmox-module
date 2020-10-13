@@ -5,7 +5,7 @@
   variable "vm_name" {
       description = "(Required) VM Name"
       default = [""]
-      type = "list(string)"
+      type = list(string)
   }
   variable "node" {
       description = "(Required) Proxmox Node to deploy to"
