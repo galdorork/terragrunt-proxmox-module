@@ -11,7 +11,7 @@ provider "proxmox" {
 # Change $LVMSTORAGENAME to the storage that the VM's disk is going to be created at.
 resource "proxmox_vm_qemu" "proxmox_vm" {
   count             = var.vm_count
-  name              = var.vm_name[count.index]
+  name              = "${var.vm_name[count.index]}"
   target_node       = var.node
   clone             = var.template
   os_type           = var.os_type
