@@ -9,7 +9,17 @@
       type = "string"
   }
   variable "node" {
+      description = "(Required) Proxmox Node to deploy to"
+      default = ""
+      type = "string"
+  }
+  variable "node_ip" {
       description = "(Required) Proxmox Node IP to be used"
+      default = ""
+      type = "string"
+  }
+  variable "node_password" {
+      description = "(Required) Proxmox Node password to be used"
       default = ""
       type = "string"
   }
