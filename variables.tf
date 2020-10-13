@@ -4,7 +4,7 @@
   }
   variable "vm_name" {
       description = "(Required) VM Name"
-      default = [""]
+      default = ""
       type = string
   }
   variable "node" {
