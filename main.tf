@@ -11,7 +11,7 @@ provider "proxmox" {
 # Change $LVMSTORAGENAME to the storage that the VM's disk is going to be created at.
 resource "proxmox_vm_qemu" "proxmox_vm" {
   count             = var.vm_count
-  name              = "${var.vm_name[count.index]}"
+  name              = var.vm_name[count.index]
   #name              = var.vm_name
   target_node       = var.node
   clone             = var.template
@@ -41,7 +41,7 @@ resource "proxmox_vm_qemu" "proxmox_vm" {
     ]
   }
 # Cloud Init Settings (Change the IP range and the GW to suit your needs)
-  ipconfig0 = "ip=${var.ip}/24,gw=10.10.10.1"
+  ipconfig0 = "ip=${var.ip[count.index]}/24,gw=10.10.10.1"
   sshkeys = <<EOF
   ${var.ssh_key}
   EOF
