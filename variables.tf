@@ -5,7 +5,7 @@
   variable "vm_name" {
       description = "(Required) VM Name"
       default = ""
-      type = string
+      type = list(string)
   }
   variable "node" {
       description = "(Required) Proxmox Node to deploy to"
@@ -105,7 +105,7 @@
   variable "ip" {
       description = "(Required) IP to be used by the VM"
       default = ""
-      type = string
+      type = list(string)
   }
   variable "ssh_key" {
       description = "(Required) SSH Key to be configured for access to the VM, you won't be able to access the VMs if this value isn't set up"
