@@ -4,7 +4,7 @@
   }
   variable "vm_name" {
       description = "(Required) VM Name"
-      default = ""
+      default = ("")
       type = list(string)
   }
   variable "node" {
@@ -104,7 +104,7 @@
   }
   variable "ip" {
       description = "(Required) IP to be used by the VM"
-      default = ""
+      default = ("")
       type = list(string)
   }
   variable "ssh_key" {
