@@ -1,6 +1,6 @@
 # Change $PROXMOXSERVERIP to one of your Proxmox Node's IPs or FQDN.
 # Change $SUPERSECRETPASSWORD to the root password of the node.
-provider "proxmox" {
+provider "telmate/proxmox" {
     pm_api_url = "https://${var.node_ip}:8006/api2/json"
     pm_user = "root@pam"
     pm_password = var.node_password
