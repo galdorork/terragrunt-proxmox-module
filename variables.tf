@@ -1,7 +1,7 @@
-  variable "vm_count" {
-      description = "(Required) Amount of VMs to be created"
-      default = "0"
-  }
+  #variable "vm_count" {
+  #    description = "(Required) Amount of VMs to be created"
+  #    default = "0"
+  #}
   variable "vm_name" {
       description = "(Required) VM Name"
       type = list(string)

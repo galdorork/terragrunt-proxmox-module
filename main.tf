@@ -10,7 +10,7 @@ provider "proxmox" {
 # Change $NODETOBEDEPLOYED to the nmode where you want the VMs to be created at.
 # Change $LVMSTORAGENAME to the storage that the VM's disk is going to be created at.
 resource "proxmox_vm_qemu" "proxmox_vm" {
-  count             = var.vm_count
+  count             = length(var.vm_name)
   name              = var.vm_name[count.index]
   target_node       = var.node
   clone             = var.template
