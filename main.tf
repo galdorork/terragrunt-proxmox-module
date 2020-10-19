@@ -40,7 +40,7 @@ resource "proxmox_vm_qemu" "proxmox_vm" {
     ]
   }
 # Cloud Init Settings (Change the IP range and the GW to suit your needs)
-  ipconfig0 = "ip=${var.ip[count.index]}/24,gw=${var.gw}"
+  ipconfig0 = "ip=${var.ip[count.index]}/${var.network_mask},gw=${var.gateway}"
   sshkeys = <<EOF
   ${var.ssh_key}
   EOF

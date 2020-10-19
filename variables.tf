@@ -105,8 +105,12 @@
       description = "(Required) IP to be used by the VM"
       type = list(string)
   }
-  variable "gw" {
+  variable "gateway" {
       description = "(Required) Gateway to be used by the VM"
+      type = string
+  }
+  variable "network_mask" {
+      description = "(Required) SubnetMask to be used by the VM"
       type = string
   }
   variable "ssh_key" {
