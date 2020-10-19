@@ -12,7 +12,6 @@ provider "proxmox" {
 resource "proxmox_vm_qemu" "proxmox_vm" {
   count             = var.vm_count
   name              = var.vm_name[count.index]
-  #name              = var.vm_name
   target_node       = var.node
   clone             = var.template
   os_type           = var.os_type
@@ -41,7 +40,7 @@ resource "proxmox_vm_qemu" "proxmox_vm" {
     ]
   }
 # Cloud Init Settings (Change the IP range and the GW to suit your needs)
-  ipconfig0 = "ip=${var.ip[count.index]}/24,gw=10.10.10.1"
+  ipconfig0 = "ip=${var.ip[count.index]}/24,gw=${var.gw}"
   sshkeys = <<EOF
   ${var.ssh_key}
   EOF

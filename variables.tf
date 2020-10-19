@@ -105,6 +105,10 @@
       description = "(Required) IP to be used by the VM"
       type = list(string)
   }
+  variable "gw" {
+      description = "(Required) Gateway to be used by the VM"
+      type = string
+  }
   variable "ssh_key" {
       description = "(Required) SSH Key to be configured for access to the VM, you won't be able to access the VMs if this value isn't set up"
       default = ""
