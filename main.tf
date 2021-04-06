@@ -31,7 +31,7 @@ resource "proxmox_vm_qemu" "proxmox_vm" {
   scsihw            = var.diskhw
   bootdisk          = var.bootdisk
   disk {
-    id              = 0
+    #id              = 0
     size            = var.disk_size
     type            = var.disk_type
     storage         = var.lvm_storage
@@ -39,7 +39,7 @@ resource "proxmox_vm_qemu" "proxmox_vm" {
     iothread        = var.iothread
   }
   network {
-    id              = var.network_id
+    #id              = var.network_id
     model           = var.network_model
     bridge          = var.network_bridge
   }
