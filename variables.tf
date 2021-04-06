@@ -118,3 +118,7 @@
       default = ""
       type = string
   }
+  variable "preprovision" {
+      default = "true"
+      type = bool
+  }
