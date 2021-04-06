@@ -35,7 +35,7 @@ resource "proxmox_vm_qemu" "proxmox_vm" {
     size            = var.disk_size
     type            = var.disk_type
     storage         = var.lvm_storage
-    storage_type    = var.storage_type
+    #storage_type    = var.storage_type
     #iothread        = var.iothread
   }
   network {
