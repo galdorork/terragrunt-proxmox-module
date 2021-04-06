@@ -30,6 +30,7 @@ resource "proxmox_vm_qemu" "proxmox_vm" {
   memory            = var.memory
   scsihw            = var.diskhw
   bootdisk          = var.bootdisk
+  preprovision      = var.preprovision
   disk {
     #id              = 0
     size            = var.disk_size
